@@ -77,7 +77,7 @@ This is a simple student project. The prediction model is a basic baseline and d
 This project successfully moved from raw data to data cleaning, analysis, and finally to business insights. It helped me learn how data can guide basic business actions.
 
 ## 18. Project Files
-- app.py: The main Streamlit dashboard.
+- PriyanshuRai_CustomerChurnAnalysis.py: The main Streamlit dashboard.
 - requirements.txt: The required libraries.
 - README.md: Project overview.
-- Project_Report.md / project_report.docx: This report.
+- PriyanshuRai_ProjectReport.docx: This report.

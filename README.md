@@ -47,15 +47,14 @@ pip install -r requirements.txt
 
 2. Run the main application file:
 ```bash
-streamlit run app.py
+streamlit run PriyanshuRai_CustomerChurnAnalysis.py
 ```
 
 ## Project Files
-- `app.py`: The main Python application file containing the data cleaning, charts, and dashboard UI.
+- `PriyanshuRai_CustomerChurnAnalysis.py`: The main Python application file containing the data cleaning, charts, and dashboard UI.
 - `requirements.txt`: The list of Python libraries needed to run the code.
 - `README.md`: This overview file.
-- `Project_Report.md`: The text version of my project report.
-- `project_report.docx`: The Microsoft Word version of my project report.
+- `PriyanshuRai_ProjectReport.docx`: The Microsoft Word version of my project report.
 
 ## Limitations
 This is a student project. The prediction model is a basic baseline example and is not a production-ready system. It simply helps to show patterns in the data.
