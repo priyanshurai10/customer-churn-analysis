@@ -1,62 +1,61 @@
 # Customer Churn Analysis
 
-Hi, I am a B.Tech CSE student and this is my student project for the IBM SkillsBuild / BharatCares Data Analytics internship.
+## About the Project
+Hi, I created this project as part of my IBM SkillsBuild Data Analytics with AI internship. It is a simple data analytics project built with Python and Streamlit.
 
-## About the project
-I made this project to understand customer churn data. Churn means when a customer leaves a company. Finding out why people leave helps a business take action and save money.
-
-## Problem statement
-The main questions I wanted to answer are:
-- How many customers are leaving?
-- Which customer groups have higher churn?
-- Does contract type or internet service affect churn?
-- What possible business actions can be taken to reduce this?
+## Objective
+I wanted to analyze customer data to understand:
+- How many customers are leaving.
+- Which customer groups have higher churn.
+- Whether contract type or internet service affects churn.
+- What possible business actions can be taken to reduce this churn.
 
 ## Dataset
-I used the IBM Telco Customer Churn sample dataset. It contains data about a telecom company's customers, their services, how much they pay, and whether they churned (left) or not.
-Dataset source: [IBM Telco Customer Churn dataset](https://github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Customer-Churn.csv)
+I used the IBM Telco Customer Churn sample dataset.
+**Dataset Source:** [Telco-Customer-Churn.csv](https://github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Customer-Churn.csv)
 
-## What I did
+*(Note: I checked this against the IBM masterclass requirement. The masterclasses primarily used e-commerce data, so this Telecom dataset is safe to use for the final project without conflict).*
 
-### 1. Data Cleaning
-- Loaded the dataset using Pandas.
-- Converted the `TotalCharges` column to numeric because it was stored as text.
-- Removed rows with missing values (there were very few).
-- Created a `ChurnFlag` (1/0) for easy calculations.
-- Grouped `tenure` into simple groups like "0-1 Year", "1-2 Years".
+## What I Analyzed
+I explored the data to understand the relationship between churn and:
+- Contract type (Month-to-month vs 1-Year/2-Year)
+- Internet service (DSL vs Fiber Optic)
+- Tenure (How long they have been a customer)
+- Monthly charges
 
-### 2. Analysis
-I created simple charts using Matplotlib to see patterns. I found that Month-to-Month contracts have very high churn. Also, people with Fiber Optic internet tend to leave more.
-
-### 3. Machine Learning
-I trained a basic Logistic Regression model using `scikit-learn` to predict churn risk. I used one-hot encoding for categorical text data and scaled the numerical data. 
-*Note: This prediction model is only a basic baseline. It doesn't guarantee exactly who will leave, but it helps find risk patterns better than guessing.*
-
-### 4. Business Insights
-I added a section in the dashboard explaining the Risks, Opportunities, and Possible Actions the business can take (like offering discounts to switch to 1-year contracts).
-
-## Technologies used
+## Tools Used
 - Python
-- Pandas & NumPy (for data handling)
+- Pandas (for data cleaning)
+- NumPy (for numeric operations)
 - Matplotlib (for simple charts)
-- Scikit-Learn (for basic machine learning)
-- Streamlit (for building the web dashboard)
+- Scikit-learn (for basic prediction)
+- Streamlit (for building the simple dashboard)
 
-## How to run the project
+## Main Project Flow
+Data → Cleaning → Analysis → Insights → Risk → Opportunity → Possible Action
 
-1. Open your terminal or command prompt.
-2. Install the required libraries by typing:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the Streamlit dashboard by typing:
-   ```bash
-   streamlit run customer_retention_dashboard.py
-   ```
-4. The dashboard will automatically open in your web browser.
+## Prediction
+I included a basic Logistic Regression model. It is trained on the customer data to predict if someone is likely to churn. I calculated the F1 score and ROC-AUC score.
 
-## Project files
-- `customer_retention_dashboard.py`: The main python code that cleans data, trains the model, and shows the UI.
-- `requirements.txt`: The list of libraries needed.
-- `README.md`: This file explaining the project.
-- `project_report.md` / `project_report.docx`: The text report summarizing my work.
+## How to Run
+To run this project locally, use your terminal and type:
+
+1. Install the required libraries:
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the main application file:
+```bash
+streamlit run app.py
+```
+
+## Project Files
+- `app.py`: The main Python application file containing the data cleaning, charts, and dashboard UI.
+- `requirements.txt`: The list of Python libraries needed to run the code.
+- `README.md`: This overview file.
+- `Project_Report.md`: The text version of my project report.
+- `project_report.docx`: The Microsoft Word version of my project report.
+
+## Limitations
+This is a student project. The prediction model is a basic baseline example and is not a production-ready system. It simply helps to show patterns in the data.
